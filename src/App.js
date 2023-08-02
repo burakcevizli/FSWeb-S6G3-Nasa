@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
-
+import Greeting from "./greetings";
 
 
 const sahteData = {
@@ -34,6 +34,8 @@ function App() {
 
   return (
     <div className="App">
+
+      <Greeting date = {data.date}/>
       
       <h1> {data.title} </h1>
 
