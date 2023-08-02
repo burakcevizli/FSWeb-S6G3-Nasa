@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
+
 
 
 const sahteData = {
@@ -23,13 +24,17 @@ function App() {
   const [data, setData] = useState(sahteData)
   const [showImg, setShowImg] = useState(false)
   const [showExplanation, setShowExplantion] = useState(false)
-  // const [showImg, setShowImg] = useState(true)
-  // const [showImg, setShowImg] = useState(true)
+
+
+
+  useEffect(()=>{
+    console.log("Use Effect Kullanıldı")
+  },[showExplanation,showImg])
 
 
   return (
     <div className="App">
-
+      
       <h1> {data.title} </h1>
 
       <button onClick={() => {
@@ -42,7 +47,7 @@ function App() {
 
       <br />
       <br />
-
+      <showHideImg />
 
       {showImg && <img src={data.url} />}
 
@@ -62,6 +67,10 @@ function App() {
 
 
       {showExplanation && <p>{data.explanation}</p> }
+
+
+
+      
 
     </div>
 
