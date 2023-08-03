@@ -7,6 +7,7 @@ import Img from "./components/Img";
 import Paragraph from "./components/Paragraph";
 import Header from "./components/Header";
 import DateField from "./components/DateField";
+import NavbarNasa from "./components/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./AppBody.css";
 import "./OzelHeaderClass.css";
@@ -22,7 +23,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("https://api.nasa.gov/planetary/apod", {
+      .get("https://api.nasa.gov/planetary/apod?api_key=vjpqfnlPi7E7NxIuQtg9BJpmwZABu579rlcu85D8", {
         
       })
       .then(function (response) {
@@ -45,7 +46,8 @@ function App() {
       {(data === undefined) ? <p>Html Yükleniyor ...</p> :
         <div className="AppBody" style={{ backgroundImage: `url(${data.hdurl})` }} >
 
-
+      
+        <NavbarNasa />
 
 
           <Header />
@@ -54,7 +56,7 @@ function App() {
 
 
 
-          <DateField />
+          {/* <DateField /> */}
         
 
 
