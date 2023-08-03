@@ -1,0 +1,31 @@
+.AppBody{
+
+
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+
+    
+}
+
+.ozelParagraf{
+    height: 74%;
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.ozelTitle{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+
+
+}

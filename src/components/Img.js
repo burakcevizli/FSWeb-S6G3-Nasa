@@ -1,5 +1,6 @@
 const Img = (img)=>{
-    return <img src={img.image}/>
+    
+    return <img className="img" src={img.image}/>
 }
 
 export default Img;

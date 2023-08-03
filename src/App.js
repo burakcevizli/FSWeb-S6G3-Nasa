@@ -6,10 +6,17 @@ import Title from "./components/Title";
 import Img from "./components/Img";
 import Paragraph from "./components/Paragraph";
 import Header from "./components/Header";
+import DateField from "./components/DateField";
+import "bootstrap/dist/css/bootstrap.min.css"
+import "./AppBody.css";
+import "./OzelHeaderClass.css";
+
+
 
 function App() {
 
   const [data, setData] = useState(undefined)
+  
   
 
 useEffect(()=>{
@@ -30,18 +37,25 @@ useEffect(()=>{
   return (
     <div className="App">
       {(data === undefined) ? <p>Html Yükleniyor ...</p> :
-        <div>
+        <div className="AppBody" style={{ backgroundImage: `url(${data.hdurl})`}} >
+      
+
+
       
       <Header />
+      
+
+      <DateField />
 
       <Date date = {data.date}/>
       
-      <Title title = {data.title}/>
+      <Title title = {data.title}  date = {data.date}/>
 
-      <Img image = {data.url}/>
+      {/* <Img image = {data.url}/> */}
 
       <Paragraph paragraph = {data.explanation} />
-    
+
+
       </div>
     }
     </div>
