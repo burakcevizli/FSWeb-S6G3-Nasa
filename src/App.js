@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
-import Date from "./Date";
+import Date from "./components/Date";
 import Title from "./components/Title";
 import Img from "./components/Img";
 import Paragraph from "./components/Paragraph";
