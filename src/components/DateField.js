@@ -18,11 +18,13 @@ export default function DateField() {
     color: inputDeğeri.length > 10 ? "crimson" : "royalblue"
   };
 
+
+  
+
   return (
-    <div className='widget-input container'>
-      <h2>Input</h2>
+    <div className='widget-input container datefield'>
       <div id='output' style={stil}>
-        {inputDeğeri.toUpperCase()}
+        {inputDeğeri}
       </div>
       <div>
         <input id='input' type='date' onChange={inputuDeğiştir} value={inputDeğeri} />

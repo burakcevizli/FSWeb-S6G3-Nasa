@@ -16,48 +16,57 @@ import "./OzelHeaderClass.css";
 function App() {
 
   const [data, setData] = useState(undefined)
+  const [tarih , setTarih] = useState(undefined)
   
   
 
-useEffect(()=>{
-  axios.get("https://api.nasa.gov/planetary/apod?api_key=vjpqfnlPi7E7NxIuQtg9BJpmwZABu579rlcu85D8")
-  .then(function (response) {
-    console.log(response.data)
-    setData(response.data)
-  })
-  .catch(function (error) {
-    
-    console.log(error);
-  })
-  .finally(function () {
-    
-  });
-},[])
+  useEffect(() => {
+    axios
+      .get("https://api.nasa.gov/planetary/apod", {
+        
+      })
+      .then(function (response) {
+        console.log(response.data)
+        setData(response.data)
+       
+      })
+      .catch(function (error) {
+
+        console.log(error);
+      })
+      .finally(function () {
+
+      });
+  }, [])
+ 
 
   return (
     <div className="App">
       {(data === undefined) ? <p>Html Yükleniyor ...</p> :
-        <div className="AppBody" style={{ backgroundImage: `url(${data.hdurl})`}} >
-      
+        <div className="AppBody" style={{ backgroundImage: `url(${data.hdurl})` }} >
 
 
-      
-      <Header />
-      
-
-      <DateField />
-
-      <Date date = {data.date}/>
-      
-      <Title title = {data.title}  date = {data.date}/>
-
-      {/* <Img image = {data.url}/> */}
-
-      <Paragraph paragraph = {data.explanation} />
 
 
-      </div>
-    }
+          <Header />
+
+          <Date date={data.date} />
+
+
+
+          <DateField />
+        
+
+
+          <Title title={data.title} date={data.date} />
+
+          {/* <Img image = {data.url}/> */}
+
+          <Paragraph paragraph={data.explanation} />
+
+
+        </div>
+      }
     </div>
 
   );
