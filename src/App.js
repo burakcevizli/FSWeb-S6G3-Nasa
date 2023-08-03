@@ -7,17 +7,14 @@ import Img from "./components/Img";
 import Paragraph from "./components/Paragraph";
 import Header from "./components/Header";
 import DateField from "./components/DateField";
-import NavbarNasa from "./components/Navbar";
-import "bootstrap/dist/css/bootstrap.min.css"
-import "./AppBody.css";
-import "./OzelHeaderClass.css";
+
 
 
 
 function App() {
 
   const [data, setData] = useState(undefined)
-  const [tarih , setTarih] = useState(undefined)
+  
   
   
 
@@ -44,10 +41,10 @@ function App() {
   return (
     <div className="App">
       {(data === undefined) ? <p>Html Yükleniyor ...</p> :
-        <div className="AppBody" style={{ backgroundImage: `url(${data.hdurl})` }} >
+        <div >
 
       
-        <NavbarNasa />
+        
 
 
           <Header />
@@ -62,7 +59,7 @@ function App() {
 
           <Title title={data.title} date={data.date} />
 
-          {/* <Img image = {data.url}/> */}
+          <Img image = {data.url}/>
 
           <Paragraph paragraph={data.explanation} />
 
