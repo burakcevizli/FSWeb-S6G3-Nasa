@@ -3,6 +3,87 @@
   text-align: center;
 }
 
+.main{
+  display: flex;
+}
+.component-class{
+  margin-top: 2rem;
+}
+
+.navbar{
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  
+}
+.navbar img{
+  margin-top: 1rem;
+}
+.navbar a{
+  /* margin-top: 2rem; */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: rgb(97, 219, 251);
+}
+.paragraf{
+  padding: 0 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.main-iki{
+  display: flex;
+  justify-content: space-around;
+}
+.navbar input{
+  /* margin-top: 2rem; */
+  margin-left: .5rem;
+}
+.navbar button{
+  /* margin-top: 1rem; */
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: rgb(112, 211, 211);
+  border-radius: 2.5rem;
+  font-size: 1rem;
+  border: none;
+  
+}
+
+.navbar img{
+  width: 7rem;
+  margin-left: 2rem;
+}
+.logo{
+  animation: rotate 2s linear infinite; 
+}
+@keyframes rotate{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .App-logo {
   height: 40vmin;

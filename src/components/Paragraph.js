@@ -2,7 +2,7 @@
 const Paragraph = (pr) =>{
 
 
-    return <div className="ozelParagraf"><p>{pr.paragraph}</p></div> 
+    return <p className="paragraf">{pr.paragraph}</p>
 }
 
 export default Paragraph;
